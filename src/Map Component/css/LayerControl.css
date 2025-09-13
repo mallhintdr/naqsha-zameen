@@ -1,0 +1,52 @@
+/* Dropdown container */
+.dropdown-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border-radius: 10px; /* Slightly less rounded corners */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  padding: 8px; /* Reduced padding */
+  transition: all 0.3s ease; /* Smooth animation */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Dropdown select styling */
+.dropdown-select {
+  height: 28px; /* Slightly reduced height */
+  font-size: 14px; /* Slightly smaller text */
+  border-radius: 10px; /* Reduced rounded edges */
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 0 8px; /* Reduced padding inside the input */
+  background-color: #f9f9f9; /* Light gray background */
+  color: #333; /* Dark text */
+  cursor: pointer;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Dropdown select hover and focus states */
+.dropdown-select:hover {
+  background-color: #f0f0f0; /* Slightly darker background on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight elevation */
+}
+
+.dropdown-select:focus {
+  border-color: #004895; /* Highlighted border on focus */
+  background-color: #fff; /* White background */
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3); /* Blue glow */
+}
+
+/* Dropdown options styling */
+.dropdown-select option {
+  padding: 4px; /* Reduced padding */
+  font-size: 14px; /* Slightly smaller font size */
+}
+
+/* Active state */
+.dropdown-container.active {
+  transform: scale(1.03); /* Slightly reduced zoom effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}

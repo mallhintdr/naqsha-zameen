@@ -1,0 +1,78 @@
+.goto-location-form {
+  /* Match placement style of Shift Mouza dialog */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+.goto-location-form h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: calc(100% - 10px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Add spacing between buttons */
+}
+
+.form-buttons button {
+  padding: 6px 10px; /* Smaller buttons */
+  font-size: 12px; /* Smaller text */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1; /* Ensure buttons are evenly spaced */
+  text-align: center;
+}
+
+.form-buttons .btn-go-to {
+  background-color: #007bff;
+  color: white;
+}
+
+.form-buttons .btn-clear {
+  background-color: #ff9800;
+  color: white;
+}
+
+.form-buttons .btn-cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.form-buttons button:hover {
+  opacity: 0.9;
+}
+
+.form-buttons button:active {
+  transform: scale(0.95); /* Add a slight click effect */
+}

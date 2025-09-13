@@ -1,0 +1,28 @@
+/* ShiftMouzaForm.css */
+
+/* Container sits fixed on the right, 25% width, full height */
+.shift-form-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  z-index: 1000; /* make sure it sits above the map layers */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.95); /* slightly translucent background */
+  padding: 1rem;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* The card fills the container’s width */
+.shift-form-card {
+  width: 100%;
+}
+
+/* Optionally, override Bootstrap’s scroll if you have many fields */
+.shift-form-card .card-body {
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+}

@@ -1,0 +1,115 @@
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease;
+}
+
+.profile-icon {
+  width: 32px; /* Fixed width for PC screens */
+  height: 32px; /* Fixed height for PC screens */
+  border-radius: 50%; /* Keep the circular shape */
+  border: 2px solid var(--primary-color); /* Consistent border styling */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); /* Maintain shadow */
+  transition: transform 0.2s ease; /* Smooth transition for hover effects */
+}
+
+
+.profile-icon:hover {
+  transform: rotate(20deg); /* Rotate 20 degrees clockwise on hover */
+}
+
+.username {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--primary-color);
+  transition: transform 0.2s ease; /* Smooth transition for scaling */
+}
+
+.username:hover {
+  transform: scale(1.1); /* Scale up by 1.1 times on hover */
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+}
+
+/* Align buttons in a row and compact them */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  align-items: center; /* Align vertically */
+  gap: 10px; /* Add spacing between buttons */
+  padding: 10px; /* Compact padding */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.modal-footer .btn {
+  padding: 6px 12px; /* Compact padding for buttons */
+  font-size: 0.85rem; /* Smaller font size */
+  border-radius: 6px; /* Rounded corners */
+  margin: 0; /* Remove any extra margin */
+}
+
+.modal-footer .btn-warning {
+  background-color: var(--secondary-color); /* Match theme color */
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-footer .btn-warning:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.modal-footer .btn-danger {
+  background-color: #dc3545; /* Standard red danger color */
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-footer .btn-danger:hover {
+  background-color: #bd2130; /* Darker red on hover */
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  
+  .profile-container {
+    gap: 8px; /* Adjust gap for smaller screens */
+  }
+  
+  .profile-details {
+    font-size: 0.75rem; /* Slightly smaller font for better fit */
+    gap: 8px; /* Reduce gap between profile details */
+    align-items: center; /* Ensure alignment in smaller screens */
+  }
+
+  .username {
+    font-size: 0.7rem; /* More compact username text */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Avoid overflow issues */
+    text-overflow: ellipsis; /* Add ellipsis if the username is too long */
+  }
+
+  .modal-footer {
+    justify-content: center; /* Center buttons for symmetry */
+    gap: 6px; /* Reduce spacing between buttons */
+    padding: 6px; /* More compact padding */
+    flex-wrap: wrap; /* Allow wrapping if needed on very small screens */
+  }
+
+  .modal-footer .btn {
+    padding: 4px 8px; /* Compact button padding */
+    font-size: 0.7rem; /* Smaller font size for buttons */
+    border-radius: 4px; /* Slightly smaller rounded corners */
+    line-height: 1.2; /* Tighter line height for compactness */
+  }
+}

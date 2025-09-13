@@ -1,0 +1,141 @@
+.navbar-tech-theme {
+  background: var(--gradient-bg);
+  padding: 4px 10px; /* Adjust padding for alignment and spacing */
+  border-bottom: 2px solid var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Prevent wrapping for cleaner layout */
+  overflow: visible !important;
+}
+
+.navbar-brand-custom {
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  margin-right: 0; /* Remove margin for closer alignment */
+  padding-left: 4px; /* Minimal padding for left alignment */
+}
+
+.navbar-brand-custom i {
+  font-size: 1.75rem;
+  color: white;
+}
+
+.navbar-brand-custom:hover {
+  color: var(--primary-color);
+}
+
+.dropdown-menu {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  min-width: 150px; /* Compact width */
+  max-height: 200px; /* Compact height */
+  overflow-y: auto;
+  padding: 5px 10px; /* Compact inner padding */
+  border-radius: 6px; /* Subtle rounded corners */
+}
+
+.dropdown-item {
+  color: var(--secondary-color);
+  font-size: 0.75rem;
+}
+
+.dropdown-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.rounded-dropdown {
+  border-radius: 2px;
+  padding: 0.3rem 0.6rem; /* Compact padding */
+  margin-right: 0; /* Remove unnecessary margin */
+  font-size: 0.85rem;
+  min-width: 120px; /* Compact dropdown width */
+}
+
+/* Left Section: Three-dotted menu button and Chak dropdown */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Keep items left-aligned */
+  gap: 4px; /* Spacing between button and Chak dropdown */
+
+}
+/* Right Section: Murabba dropdown and profile */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push Murabba dropdown and profile to the far right */
+  gap: 6px; /* Spacing between Murabba dropdown and profile */
+}
+.navbar-left .three-dots-button {
+  padding: 2px; /* Minimal padding for compact size */
+  margin: 0; /* Remove unnecessary margins */
+}
+.navbar-right .rounded-dropdown {
+  margin-right: 0; /* Remove extra margin */
+}
+
+/* Center Section (optional for additional content) */
+.navbar-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .navbar-tech-theme {
+    padding: 2px 6px; /* Reduced padding for smaller screens */
+    justify-content: space-between;
+  }
+
+  .navbar-left {
+    justify-content: flex-start; /* Ensure left alignment on small screens */
+  }
+
+  .navbar-right {
+    justify-content: flex-end; /* Ensure right alignment on small screens */
+  }
+
+  .navbar-brand-custom {
+    font-size: 0.85rem;
+    margin-right: 0;
+    padding-left: 2px; /* Compact left padding */
+  }
+
+  .navbar-brand-custom i {
+    font-size: 1.4rem; /* Adjust icon size for smaller screens */
+  }
+
+  .rounded-dropdown {
+    padding: 0.2rem 0.5rem; /* Further reduce padding */
+    font-size: 0.75rem; /* Smaller font size */
+    min-width: 100px;
+  }
+
+  .dropdown-menu {
+    min-width: 120px; /* Compact dropdown menu width */
+    max-height: 200px;
+    font-size: 0.7rem; /* Adjust font size */
+  }
+
+  .profile-container {
+    gap: 2px; /* Minimal spacing for compact profile layout */
+  }
+
+  .profile-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .username {
+    font-size: 0.7rem; /* Adjust font for smaller screens */
+    white-space: nowrap;
+  }
+}

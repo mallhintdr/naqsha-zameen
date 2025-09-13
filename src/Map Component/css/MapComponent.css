@@ -1,0 +1,134 @@
+:root {
+  --vh: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+.gradient-theme {
+  display: flex;
+  flex-direction: column;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.map-container {
+  flex-grow: 1;
+  height: calc(var(--vh, 1vh) * 100 - 50px); /* Adjust dynamically */
+  width: 100%;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  background-color: rgba(220, 220, 220, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: rgba(100, 223, 247, 0.9) !important;
+}
+
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: calc(var(--vh, 1vh) * 100 - 40px);
+  }
+
+  .leaflet-control-zoom-in,
+  .leaflet-control-zoom-out {
+    background-color: rgba(180, 180, 180, 0.9);
+  }
+}
+.map-container {
+  position: relative;
+}
+
+/* Outer container that is vertical, same height as the slider. */
+.vertical-slider-container {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+
+  /* Let's say the slider is about 150px tall (after rotation).
+     We want the container also 150px in height to match. 
+     We'll give it a narrow width, e.g. 50px, so it is tall & vertical. */
+  width: 30px;
+  height: 150px;
+
+  /* White background, optionally a bit of transparency if you want. */
+  background: #fff;
+  border-radius: 8px;
+  z-index: 999;
+
+  /* 
+    Center the slider horizontally & vertically in the container:
+  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The slider itself. */
+.vertical-opacity-slider {
+  /* Without rotation, the slider is 150px wide => 
+     once rotated, it becomes 150px tall. */
+  width: 150px;
+
+  /* Rotate to vertical orientation. */
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  cursor: pointer;
+  background: transparent;
+  outline: none; /* optional: remove focus outline */
+}
+.tile-loading-overlay {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background: rgba(255,255,255,0.8);
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.map-loading-spinner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.35); /* semi-transparent, optional */
+  pointer-events: none; /* allow map interaction while tiles load */
+}
+
+.map-loading-spinner {
+  border: 7px solid #e3e3e3;
+  border-top: 7px solid #047499;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  animation: map-spin 1s linear infinite;
+}
+
+@keyframes map-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

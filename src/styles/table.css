@@ -1,0 +1,144 @@
+/* Table Styling */
+.table {
+  width: 100%;
+  table-layout: auto;
+  font-size: 0.9rem; /* Compact font size */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Responsive wrapper for horizontal scrolling */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+}
+
+/* Table Header Styling */
+.table th {
+  background: #28578a !important; /* Dark blue for better contrast */
+  color: #ffffff !important;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  white-space: pre-wrap; /* Allow multi-line headers */
+  text-transform: none;
+  padding: 10px 14px;
+  border: 1px solid #1c3d5a;
+}
+
+.table th:hover {
+  background: #0462a8 !important; /* Hover state */
+}
+
+.table th:first-child {
+  border-top-left-radius: 1px;
+}
+
+.table th:last-child {
+  border-top-right-radius: 1px;
+}
+
+/* Table Row and Cell Styling */
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  vertical-align: middle;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternate row shading */
+}
+
+.table tr:hover {
+  background-color: #eaeaea;
+  transition: background-color 0.3s ease;
+}
+
+/* Filters Row */
+.table .filter-input {
+  width: 100%;
+  font-size: 0.85rem;
+  padding: 5px 8px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  background-color: #fafafa;
+}
+
+.table .filter-input:focus {
+  border-color: #143d4f;
+  box-shadow: 0 0 5px rgba(20, 61, 79, 0.5);
+}
+
+/* Buttons in Table */
+.btn-group button {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  margin: 0 2px;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.btn-group button:hover {
+  transform: scale(1.05);
+}
+
+/* Pagination */
+.pagination-controls {
+  position: sticky;
+  bottom: 0;
+  background: none;
+  z-index: 10;
+}
+
+.pagination-controls button {
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.pagination-controls span {
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.record-info {
+  font-size: 0.9rem;
+  color: #f34e4e;
+}
+
+/* Responsive Table Styling */
+@media (max-width: 768px) {
+  .table-responsive {
+    max-height: 90vh; /* Prevent the table from growing too tall */
+  }
+
+  .table {
+    font-size: 0.8rem;    /* Smaller text on mobile */
+    white-space: nowrap;  /* Keep each cell in one line, scroll horizontally */
+  }
+
+  .table th,
+  .table td {
+    padding: 6px 8px;     /* Tighter padding */
+  }
+
+  .table th {
+    font-size: 0.75rem;   /* Smaller headers */
+  }
+
+  .modal-dialog {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .form-container {
+    padding: 8px;
+  }
+
+  .form-container input,
+  .form-container select {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+}

@@ -1,0 +1,49 @@
+/* Active button styling for the draw toolbar */
+.leaflet-draw-toolbar a.leaflet-draw-toolbar-button-enabled {
+  background-color: rgba(220, 220, 220, 0.9) !important;
+  color: #333 !important; /* Dark gray text */
+}
+
+/* Hover state for the draw toolbar buttons */
+.leaflet-draw-toolbar a:hover {
+  background-color: rgba(100, 223, 247, 0.9) !important;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
+}
+
+/* Tooltip styling for enhanced readability */
+.leaflet-draw-tooltip {
+  color: #333 !important; /* Dark text for readability */
+  background-color: rgba(255, 255, 255, 0.95) !important; /* Light background for clarity */
+  border: none !important;
+  padding: 8px 10px !important;
+  border-radius: 8px !important;
+  white-space: nowrap;
+  box-sizing: border-box;
+
+  /* Add a prominent shadow for a floating effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Dark shadow */
+}
+
+/* Label styling for measurements - No background, white font with red outline */
+.labelstyle, .distance-label, .area-label, .circle-label, .marker-label {
+  font-size: var(--label-font-size, 12px);
+  color: white; /* White text */
+  font-weight: bold; /* Bold for better readability */
+  text-shadow: -1px -1px 0 #FF0000, 1px -1px 0 #FF0000, -1px 1px 0 #FF0000, 1px 1px 0 #FF0000; /* Red outline */
+  white-space: nowrap;
+}
+
+/* Adjust font sizes for different zoom levels */
+.label-small {
+  font-size: 10px;
+}
+
+.label-medium {
+  font-size: 12px;
+}
+
+.label-large {
+  font-size: 14px;
+}

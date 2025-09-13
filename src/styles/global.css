@@ -1,0 +1,59 @@
+:root {
+  --gradient-bg: linear-gradient(135deg, #143d4f, #196a85, #143d4f);
+  --primary-color: #66d1ff;
+  --secondary-color: #4fa3f7;
+  --background-color: #1e3c72;
+  --table-bg: #2a5298;
+  --font-family: 'Poppins', sans-serif;
+  --text-color: #f0f0f0;
+  --hover-bg: rgba(102, 209, 255, 0.1);
+  --vh: 100%; /* Dynamically updated viewport height */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+.gradient-theme {
+  background: var(--gradient-bg);
+  color: var(--text-color);
+  min-height: calc(var(--vh, 1vh) * 100);
+  font-family: var(--font-family);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .gradient-theme {
+    padding: 10px;
+    font-size: 0.875rem;
+  }
+}
+
+.offcanvas {
+  width: auto;
+  padding: 10px;
+}
+
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container {
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.responsive-table-container {
+  padding-top: 0;
+}
+.app-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0;  /* if you also want to remove any margin */
+}

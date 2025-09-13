@@ -1,0 +1,36 @@
+.compass-container {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  z-index: 1000;
+}
+
+.leaflet-compass-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) { /* For mobile screens */
+  .leaflet-compass-icon {
+      width: 50px;
+      height: 50px;
+      border: 1.5px solid #ccc; /* Slightly thinner border */
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) { /* For medium-sized devices */
+  .leaflet-compass-icon {
+      width: 55px;
+      height: 55px;
+  }
+}

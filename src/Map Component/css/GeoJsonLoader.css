@@ -1,0 +1,46 @@
+/* Murabba Tooltip Styling */
+.murabba-tooltip {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #97e702 !important; /* Green color */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000000,  /* Horizontal shadow, Vertical shadow, Blur, and Color */
+  -1px -1px 2px #0b0b0b,
+  1px -1px 2px #050505,
+  -1px 1px 2px #070707;  /* Shadow for readability */
+}
+
+/* Killa Tooltip Styling */
+.killa-tooltip {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #FFD700 !important; /* Yellow color */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000000,  /* Horizontal shadow, Vertical shadow, Blur, and Color */
+  -1px -1px 2px #0b0b0b,
+  1px -1px 2px #050505,
+  -1px 1px 2px #070707;  /* Shadow for readability */
+}
+
+/* Remove the default pointer from Leaflet tooltips */
+.leaflet-tooltip-top:before, 
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+  border: none !important; /* This removes the triangle (pointer) under the tooltip */
+}
+
+/* Tooltip font size classes */
+.label-small {
+  font-size: 10px !important;
+}
+
+.label-medium {
+  font-size: 12px !important;
+}
+
+.label-large {
+  font-size: 16px !important;
+}

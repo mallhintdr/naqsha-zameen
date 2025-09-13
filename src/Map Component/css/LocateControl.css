@@ -1,0 +1,53 @@
+.blinking-circle {
+    width: 14px; /* Adjusted to include the border */
+    height: 14px;
+    background-color: #ff2701;
+    border-radius: 50%;
+    opacity: 1;
+    border: 3px solid #fdeb79; /* Keep the border consistent */
+    animation: blink 1.1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+.leaflet-location-icon {
+    width: 35px;
+    height: 35px;
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* Accuracy Circle */
+.leaflet-accuracy-circle {
+    stroke: none;
+    fill: #136AFE;
+    fill-opacity: 0.2;
+   }
+
+/* Button Active State */
+.leaflet-location-icon-active {
+    background-color: #ffcbcb;
+}
+
+.locating-message {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 1000;
+    font-size: 14px;
+}

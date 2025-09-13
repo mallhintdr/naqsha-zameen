@@ -1,0 +1,92 @@
+/* Compact Dropdown Styling */
+.rounded-dropdown {
+  border-radius: 8px; /* Rounded corners */
+  padding: 0.3rem 0.8rem; /* Balanced padding for compact dropdowns */
+  background-color: var(--hover-bg);
+  color: var(--text-color);
+  min-width: 120px;
+  max-width: 150px; /* Restrict maximum width */
+  margin-right: 10px; /* Spacing between dropdowns */
+  font-size: 0.85rem; /* Adjusted font size */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Ensure proper layout */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+
+/* Scrollable Dropdown Menu */
+.dropdown-menu {
+  position: absolute !important; /* Ensure the dropdown is positioned correctly */
+  max-height: 200px; /* Set a maximum height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  min-width: 200px; /* Set a comfortable minimum width */
+  z-index: 1050; /* Ensure dropdown is above other elements */
+  scrollbar-width: thin; /* Slim scrollbar for modern browsers */
+  scrollbar-color: var(--primary-color) transparent; /* Custom scrollbar color */
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+.dropdown-menu::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded scrollbar thumb */
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+}
+
+/* Dropdown Items */
+.rounded-dropdown .dropdown-item {
+  padding: 6px 10px; /* Compact padding for items */
+  font-size: 0.85rem; /* Smaller font for compact dropdown */
+  border-radius: 4px; /* Rounded corners for items */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.rounded-dropdown .dropdown-item:hover {
+  background-color: var(--primary-color); /* Highlighted background */
+  color: white; /* Text color on hover */
+  transform: scale(1.02); /* Subtle zoom effect */
+}
+
+/* Responsive Dropdown for Mobile-Friendly Design */
+@media (max-width: 768px) {
+  .rounded-dropdown {
+    min-width: 80px; /* Reduced minimum width for better fit */
+    max-width: 100px; /* Restrict maximum width on smaller screens */
+    padding: 0.15rem 0.4rem; /* Further compact padding for dropdowns */
+    font-size: 0.75rem; /* Smaller text size for dropdowns */
+    margin-right: 2px; /* Reduce spacing between dropdowns */
+    text-overflow: ellipsis; /* Ensure text fits */
+  }
+
+  .dropdown-menu {
+    max-height: 180px; /* Adjust maximum height for smaller screens */
+    min-width: 150px; /* Adjust dropdown width */
+    overflow-y: auto; /* Enable scrolling */
+    left: 5%; /* Align dropdowns properly */
+    padding: 2px;
+  }
+
+  .rounded-dropdown .dropdown-item {
+    padding: 2px 4px; /* More compact padding for items */
+    font-size: 0.8rem; /* Smaller font size for dropdown items */
+    line-height: 1.2; /* Tighter line-height for better spacing */
+    text-align: left;
+    text-overflow: ellipsis; /* Ensure text fits within bounds */
+  }
+}
+
+/* Additional Tweaks for Better Usability */
+.rounded-dropdown .dropdown-item:active {
+  background-color: var(--primary-color-dark); /* Active state color */
+  color: white;
+  transform: scale(0.98); /* Slight press effect for active state */
+}

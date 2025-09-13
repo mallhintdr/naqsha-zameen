@@ -1,0 +1,126 @@
+/* Profile Modal Styling */
+.profile-modal {
+  border-radius: 12px;
+  max-width: 450px; /* Compact width */
+  margin: 0 auto;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+  overflow: hidden;
+  background: var(--background-color);
+  border: 2px solid var(--primary-color);
+  display: flex;
+  flex-direction: column; /* Footer stays at the bottom */
+}
+
+/* Header Styling */
+.profile-modal-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  font-size: 1.125rem;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-modal-header .close-btn {
+  font-size: 1.25rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-modal-header .close-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Body Styling */
+.profile-modal-body {
+  flex: 1; /* Expand body to take available space */
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 1fr;
+  color: var(--text-color);
+  background-color: var(--table-bg);
+  border-radius: 0 0 0 0;
+}
+
+.profile-modal-body p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.profile-modal-body p strong {
+  color: var(--primary-color); /* Highlight labels */
+}
+
+/* Footer Styling */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  align-items: center;
+  gap: 8px; /* Compact space between buttons */
+  padding: 10px 15px; /* Compact padding */
+  background-color: var(--background-color);
+  border-top: 1px solid var(--primary-color); /* Visual separation */
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+.modal-footer .btn {
+  padding: 6px 10px; /* Compact padding for buttons */
+  font-size: 0.85rem; /* Compact font size */
+  border-radius: 6px; /* Modern rounded corners */
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.modal-footer .btn:hover {
+  background-color: var(--primary-hover-color);
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.modal-footer .btn-warning {
+  background-color: var(--secondary-color);
+}
+
+.modal-footer .btn-warning:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.modal-footer .btn-danger {
+  background-color: #dc3545; /* Standard red for danger actions */
+}
+
+.modal-footer .btn-danger:hover {
+  background-color: #bd2130; /* Darker red on hover */
+}
+
+/* Adjustments for Small Screens */
+@media (max-width: 768px) {
+  .profile-modal {
+    max-width: 90%; /* Full width on smaller screens */
+  }
+
+  .profile-modal-header {
+    padding: 8px 12px; /* Reduced header padding */
+  }
+
+  .profile-modal-body {
+    grid-template-columns: 1fr; /* Single-column layout */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .modal-footer {
+    justify-content: center; /* Center buttons */
+    gap: 6px; /* Smaller gap */
+    padding: 8px 10px; /* Compact footer padding */
+  }
+
+  .modal-footer .btn {
+    padding: 5px 8px; /* Smaller buttons on mobile */
+    font-size: 0.8rem;
+  }
+}
